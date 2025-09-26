@@ -10,4 +10,4 @@ PROPOSITO DEL CODIGO
 
     Solicitar al usuario un número entero y determina si es positivo, negativo o cero. Luego mostrar el mensaje correspondiente.
 
-    Ejercicio de uso de condicionales (if, elif, else).
+    Ejercicio de uso de condicionales (if, elif, else) con manejo de errores (try,except).
