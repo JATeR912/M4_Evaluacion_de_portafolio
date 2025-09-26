@@ -8,4 +8,4 @@ REQUERIMIENTOS FUNCIONALES MINIMOS ESPERADOS
 
 PROPOSITO DEL CODIGO 
 
-    Solicita datos personales al usuario (nombre, apellido, edad, ciudad y país) y luego muestra un mensaje personalizado con esa información. Ejercicio de entrada y salida de datos en Python.
+    Solicita datos personales al usuario (nombre, apellido, edad, ciudad y país) y luego muestra un mensaje personalizado con esa información. Ejercicio de entrada y salida de datos y manejo de errores en Python.
