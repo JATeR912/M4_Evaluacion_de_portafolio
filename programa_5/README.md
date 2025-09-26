@@ -8,6 +8,7 @@ REQUERIMIENTOS FUNCIONALES MINIMOS ESPERADOS
 
 PROPOSITO DEL CODIGO
 
-    Agregar un contacto (nombre y teléfono) a una agenda almacenada en un diccionario, y luego mostrar todos los contactos guardados.
+    Agendar contactos  de manera interactiva con un menú de opciones para agregar, ver, actualizar y eliminar contactos. 
 
-    Uso de funciones, diccionarios, entradas/salidas y manejo de errores en Python.
+    Uso de bucles, funciones, diccionarios, entradas/salidas y manejo de errores en Python.
+    
