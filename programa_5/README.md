@@ -8,7 +8,8 @@ REQUERIMIENTOS FUNCIONALES MINIMOS ESPERADOS
 
 PROPOSITO DEL CODIGO
 
-    Agendar contactos  de manera interactiva con un menú de opciones para agregar, ver, actualizar y eliminar contactos. 
+    Registrar contactos a agenda de manera interactiva con un menú de opciones para agregar, ver, actualizar y eliminar contactos. 
 
     Uso de bucles, funciones, diccionarios, entradas/salidas y manejo de errores en Python.
     
+    VERSION_2: Se añade manejo de archivos simple a la agenda

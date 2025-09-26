@@ -5,14 +5,28 @@ menu = {"1": "Agregar contacto",
         "4": "Eliminar contacto",
         "0": "Salir"}
 
-agenda = {}
+def cargar_agenda():
+    agenda = {}
+    try:
+        with open('agenda.txt', 'r') as archivo:
+            for linea in archivo:
+                if ':' in linea:
+                    nombre, telefono = linea.strip().split(':')
+                    agenda[nombre.strip()] = telefono.strip()
+    except FileNotFoundError:
+        pass 
+    return agenda
+
+def guardar_agenda():
+    try:
+        with open('agenda.txt', 'w') as archivo:
+            for nombre, telefono in agenda.items():
+                archivo.write(f"{nombre}: {telefono}\n")
+    except Exception as e:
+        print(f"Error al guardar la agenda: {e}")
 
 def agregar_contacto():
-    while True:
-        nombre = input("Ingrese el nombre del contacto a agregar: ").strip().capitalize()
-        if not nombre:
-            print("Error: El nombre no puede estar vacío.")
-            continue
+    nombre = input("Ingrese el nombre del contacto a agregar: ").strip().capitalize()
     while True:
         telefono = input("Ingrese el teléfono (solo números, sin '+'): ").strip()
         if telefono.isdigit() and 8 <= len(telefono) <= 15:
@@ -20,6 +34,7 @@ def agregar_contacto():
         print("Error: El teléfono debe contener solo números y tener entre 8 y 15 dígitos.")
     telefono_formateado = '+' + telefono
     agenda[nombre] = telefono_formateado
+    guardar_agenda()
     print(f"Contacto {nombre} agregado con teléfono {telefono_formateado}.")
     return
 
@@ -43,6 +58,7 @@ def actualizar_contacto():
             print("Error: El teléfono debe contener solo números y tener entre 8 y 15 dígitos.")
         agenda[nombre] = '+' + nuevo_telefono
         print(f"Contacto {nombre} actualizado con nuevo teléfono {agenda[nombre]}.")
+        guardar_agenda()
     else:
         print(f"El contacto {nombre} no existe en la agenda.")
     return
@@ -52,10 +68,12 @@ def eliminar_contacto():
     if nombre in agenda:
         del agenda[nombre]
         print(f"Contacto {nombre} eliminado de la agenda.")
+        guardar_agenda()
     else:
         print(f"El contacto {nombre} no existe en la agenda.")
     return
 
+agenda = cargar_agenda()
 while True:
     print("\nMenú de opciones:")
     for key, value in menu.items():
@@ -76,3 +94,5 @@ while True:
         break
     else:
         print("Opción no válida. Por favor intente de nuevo.")
+
+
