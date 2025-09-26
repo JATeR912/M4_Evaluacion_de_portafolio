@@ -10,4 +10,4 @@ PROPOSITO DEL CODIGO
 
     Agregar un contacto (nombre y teléfono) a una agenda almacenada en un diccionario, y luego mostrar todos los contactos guardados.
 
-    Uso de funciones, diccionarios y entradas/salidas en Python.
+    Uso de funciones, diccionarios, entradas/salidas y manejo de errores en Python.
